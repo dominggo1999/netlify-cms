@@ -1,6 +1,6 @@
 import React from 'react';
 import tw, { styled } from 'twin.macro';
-import { Routes as ReactRouter, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 export const Box = styled.div`
   ${tw`
@@ -18,14 +18,16 @@ export const Box = styled.div`
 const App = () => {
   return (
     <Box>
-      <Route
-        element={<p>Home</p>}
-        path="/"
-      />
-      <Route
-        element={<p>About</p>}
-        path="/about"
-      />
+      <Routes>
+        <Route
+          element={<p>Home</p>}
+          path="/"
+        />
+        <Route
+          element={<p>About</p>}
+          path="/about"
+        />
+      </Routes>
     </Box>
   );
 };
