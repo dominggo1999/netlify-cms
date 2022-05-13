@@ -1,34 +1,33 @@
 import React from 'react';
 import tw, { styled } from 'twin.macro';
-import { Routes, Route } from 'react-router-dom';
 
-export const Box = styled.div`
-  ${tw`
-    w-full 
-    h-screen 
-    bg-black 
-    flex 
-    justify-center
-    items-center
-    text-white
-    text-2xl
-  `}
-`;
+const data = import.meta.globEager('../content/member/*.json');
+
+const objectToArray = (obj) => {
+  const propertyNames = Object.keys(obj);
+  return propertyNames.map((i) => obj[i].default);
+};
+
+const formattedData = objectToArray(data);
 
 const App = () => {
   return (
-    <Box>
-      <Routes>
-        <Route
-          element={<p>Home</p>}
-          path="/"
-        />
-        <Route
-          element={<p>About</p>}
-          path="/about"
-        />
-      </Routes>
-    </Box>
+    <>
+      {
+        formattedData?.length > 0 && formattedData.map((i) => {
+          return (
+            <div key={i.name + i.picture}>
+              <h1>{i.name}</h1>
+              <img
+                width="200"
+                src={i.picture}
+                alt={i.name}
+              />
+            </div>
+          );
+        })
+      }
+    </>
   );
 };
 

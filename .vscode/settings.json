@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/netlify.json": "file:///d%3A/newera/netlify-cms/public/admin/config.yml"
+  }
+}
