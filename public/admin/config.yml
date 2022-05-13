@@ -40,3 +40,17 @@ collections:
       - label: "Profile Picture"
         name: "picture"
         widget: "image" 
+  - format: "json"
+    name : "faqs"
+    label : "Faqs"
+    folder : "content/faqs"
+    create : true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label : "Question"
+        name : "question"
+        widget: "string"
+      - label: "Answer"
+        name : "answer"
+        widget : "string"
+           
