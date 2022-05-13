@@ -1,8 +1,10 @@
 backend:
   name: github 
+  repo : dominggo1999/netlify-cms
   branch: master # Branch to update (optional; defaults to master)
-  base_url: https://netlify-cms-oauth-sand.vercel.app/
-  auth_endpoint: "api/auth" # used together with base_url for our custom endpoints
+  base_url: https://netlify-cms-liart.vercel.app/
+  auth_endpoint: api/auth
+local_backend : true
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
