@@ -1,12 +1,6 @@
 {
-  "redirects": [
-    {
-      "source" : "/config.yml",
-      "destination": "/admin/config.yml"
-    },
-    {
-      "source": "/[^.]+",
-      "destination": "/"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" },
+    { "source": "/config.yml", "destination": "/admin/config.yml" }
   ]
 }
