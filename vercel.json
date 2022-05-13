@@ -1,3 +1,9 @@
 {
-  "trailingSlash": true
+  "routes": [
+    {
+      "src": "/[^.]+",
+      "dest": "/",
+      "status": 200
+    }
+  ]
 }
