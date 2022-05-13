@@ -4,7 +4,6 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
   base_url: https://netlify-cms-coral.vercel.app/
   auth_endpoint: api/auth
-local_backend : true
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
